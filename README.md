@@ -34,16 +34,7 @@ The **Strava Data Analysis Project** aims to extract meaningful insights from pe
 1. **Data Cleaning**:
 
    * Handled missing values in `WeightKg`, `avg_heart_rate`, `BMI`, `Fat`, and `minute_sleep_value`.
-   * Removed duplicate entries using SQL query:
-
-     ```sql
-     DELETE FROM strava_table
-     WHERE id NOT IN (
-       SELECT MIN(id)
-       FROM strava_table
-       GROUP BY date_column, user_id, activity_type
-     );
-     ```
+   * Removed duplicate entries using SQL query
 
 2. **Data Transformation**:
 
